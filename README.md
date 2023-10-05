@@ -5,7 +5,7 @@
 ## Como usar
 ### Siga os passos abaixo para executar este projeto em sua máquina local.
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/brittoglauber/cadastro-usuario-angular
 
 cd nome-do-repositorio
 
