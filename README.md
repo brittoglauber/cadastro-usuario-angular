@@ -1,27 +1,42 @@
-# Login
+# Angular API Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.9.
+### Este é um repositório para um projeto Angular que consiste em uma API simples com duas telas no navegador: uma tela de cadastro e uma tela de login. O objetivo deste projeto é apresentar um formulário de cadastro, verificar os campos, inserir os dados em um banco de dados falso simulado pela biblioteca json-server e, em seguida, redirecionar para a tela de login. Para fazer o login, basta informar o email e senha.
 
-## Development server
+## Como usar
+### Siga os passos abaixo para executar este projeto em sua máquina local.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
 
-## Code scaffolding
+cd nome-do-repositorio
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+npm install
 
-## Build
+npm run start
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Isso iniciará o servidor de desenvolvimento e você poderá acessar a aplicação no seguinte endereço: http://localhost:4200
 
-## Running unit tests
+### Configurar a API Backend
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+cd backend
 
-## Running end-to-end tests
+npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+npm run start
 
-## Further help
+Isso iniciará a API backend na porta padrão: http://localhost:3000.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Rotas
+### A seguir, estão as principais rotas da aplicação:
+
+✔ Tela de Login: http://localhost:4200/login
+
+✔ Tela de Cadastro: http://localhost:4200/register
+
+✔ Tela Inicial: http://localhost:4200/home
+
+## Funcionalidades
+
+✔  Tela de Cadastro: Você pode preencher o formulário de cadastro com as informações necessárias. Os campos serão verificados para garantir que estejam corretos. Após a conclusão do cadastro, os dados serão inseridos no banco de dados simulado e você será redirecionado para a tela de login.
+
+✔  Tela de Login: Na tela de login, você pode fazer o login com seu email e senha previamente cadastrados.
+
