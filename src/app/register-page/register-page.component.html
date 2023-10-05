@@ -1,0 +1,88 @@
+<div class="pai">
+  <div class=" container-2 login-form">
+    <div class="caixa">
+      <div class="logo">
+        <img src="../../assets/images/logo.svg" alt="">
+      </div>
+      <div class="subtitle">
+        Create your account
+      </div>
+      <form [formGroup]="formulario" class="container-2">
+
+        <label for="" class="label-title">Name</label>
+        <input class="input" type="text" placeholder="Inform your name" formControlName="username">
+
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('username')?.errors && formulario.get('username')?.touched"
+        >
+          Name is required
+        </div>
+
+        <label for="" class="label-title">Email Address</label>
+        <input class="input" type="text" placeholder="example@gmail.com" formControlName="email">
+
+        <div
+        class="mensagem__erro"
+        *ngIf="formulario.get('email')?.errors?.['required'] && formulario.get('email')?.touched"
+        >
+        Email is required
+        </div>
+
+        <div
+        class="mensagem__erro"
+        *ngIf="formulario.get('email')?.errors?.['email'] && formulario.get('email')?.touched"
+        >
+        Invalid email format
+        </div>
+
+        <label for="" class="label-title-2">Password</label>
+        <input class="input" type="password" placeholder="Enter your password" formControlName="password">
+
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('password')?.errors?.['required'] && formulario.get('password')?.touched"
+        >
+        Password is required
+        </div>
+
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('password')?.hasError('uppercaseRequired') && formulario.get('password')?.touched">
+          {{ customPasswordErrors.uppercaseRequired}}
+        </div>
+
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('password')?.hasError('symbolRequired') && formulario.get('password')?.touched">
+          {{ customPasswordErrors.symbolRequired }}
+        </div>
+
+        <label for="" class="label-title">Confirm-password</label>
+        <input class="input" type="password" placeholder="Confirm your password" formControlName="confirmPassword">
+
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('confirmPassword')?.hasError('required') && formulario.get('confirmPassword')?.touched">
+          Confirm Password is required
+        </div>
+
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('confirmPassword')?.errors && formulario.get('confirmPassword')?.touched">
+          Passwords do not match
+        </div>
+
+        <button
+          [ngClass]="habilitarBotao()"
+          [disabled]="!formulario.valid"
+          (click)="criarUsuario()">
+          Register Now
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="container image-side">
+    <img class="imagem-principal" src="../../assets/images/login-illustrator.png" alt="">
+  </div>
+</div>

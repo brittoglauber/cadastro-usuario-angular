@@ -1,0 +1,59 @@
+<div class="pai">
+  <div class=" container-2 login-form">
+    <div class="caixa">
+      <div class="logo">
+        <img src="../../assets/images/logo.svg" alt="">
+      </div>
+      <div class="subtitle">
+        Login into your account
+      </div>
+      <form [formGroup]="formulario" class="container-2">
+        <label for="" class="label-title">Email Address</label>
+        <input class="input" type="text" placeholder="example@gmail.com" formControlName="email">
+
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('email')?.hasError('required') && formulario.get('email')?.touched">
+          Email is required
+        </div>
+
+        <div
+        class="mensagem__erro"
+        *ngIf="formulario.get('email')?.hasError('email') && formulario.get('email')?.touched">
+          Email is invalid
+        </div>
+
+        <div *ngIf="usuarioNaoEncontrado" class="erro-popup">
+          User not found.
+        </div>
+
+        <label for="" class="label-title-2">Password</label>
+        <input class="input" type="password" placeholder="Enter your password" formControlName="password">
+
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('password')?.hasError('required') && formulario.get('password')?.touched">
+          Password is required
+        </div>
+
+        <div *ngIf="erroSenha" class="erro-popup">
+          Wrong password. Try again.
+        </div>
+
+        <a class="link" href="#">Forgot Password?</a>
+
+        <button
+          [disabled]="!formulario.valid"
+          [ngClass]="habilitarBotao()"
+          (click)="verificarUsuario()">
+          Login Now
+        </button>
+        <div class="container">or</div>
+        <button class="button-signup" routerLink="/register">Signup Now</button>
+      </form>
+    </div>
+  </div>
+  <div class="container image-side">
+    <img class="imagem-principal" src="../../assets/images/login-illustrator.png" alt="">
+  </div>
+</div>

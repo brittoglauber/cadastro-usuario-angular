@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.image-side {
+  width: 70%;
+  background-color: #C2C2C2;
+}
