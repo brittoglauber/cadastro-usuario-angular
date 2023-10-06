@@ -49,12 +49,14 @@
         <div
           class="mensagem__erro"
           *ngIf="formulario.get('password')?.hasError('uppercaseRequired') && formulario.get('password')?.touched">
-          {{ customPasswordErrors.uppercaseRequired}}
+          {{ customPasswordErrors.uppercaseRequired}} <br>
+          {{ customPasswordErrors.symbolRequired }}
         </div>
 
         <div
           class="mensagem__erro"
           *ngIf="formulario.get('password')?.hasError('symbolRequired') && formulario.get('password')?.touched">
+          {{ customPasswordErrors.uppercaseRequired}} <br>
           {{ customPasswordErrors.symbolRequired }}
         </div>
 

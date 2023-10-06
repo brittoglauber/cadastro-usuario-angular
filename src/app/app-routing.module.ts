@@ -8,7 +8,7 @@ import { SuccessPageComponent } from './success-page/success-page.component';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     component: LoginPageComponent
   },
   {

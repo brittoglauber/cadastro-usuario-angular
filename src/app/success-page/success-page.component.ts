@@ -13,9 +13,8 @@ export class SuccessPageComponent implements OnInit {
   constructor(private atualizarNome: ValorCompatilhadoService) {}
 
   ngOnInit(): void {
-      this.atualizarNome.valorAtual.subscribe((nomeUsuario) => {
-        this.nomeUsuario = nomeUsuario
-      })
+      this.nomeUsuario = this.atualizarNome.obterNome();
   }
+
 
 }

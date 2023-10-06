@@ -44,7 +44,7 @@ export class RegisterPageComponent implements OnInit {
   criarUsuario() {
     if (this.formulario.valid) {
       this.service.criar(this.formulario.value).subscribe(() => {
-        this.router.navigate(['/login'])
+        this.router.navigate(['/'])
       })
     }
   }

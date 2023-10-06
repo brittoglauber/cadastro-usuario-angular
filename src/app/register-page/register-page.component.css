@@ -59,6 +59,7 @@
   background-color: #F1F3F6;
   margin: 0 auto;
   border-radius: 5px;
+  padding-left: 5px;
 }
 
 
@@ -127,6 +128,18 @@
     border-radius: 5px;
     font-weight: bold;
     background-color: #FD7401;
+    color: #FFF;
+    font-size: 16;
+    margin: 25px auto;
+    border: none;
+  }
+
+  .button-register-disabled {
+    height: 50px;
+    width: 320px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #7c7773;
     color: #FFF;
     font-size: 16;
     margin: 25px auto;
